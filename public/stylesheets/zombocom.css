@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: burlywood;
+}
+canvas#zomboCanvas {
+    border: 2px darkred;
+    align-content: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
