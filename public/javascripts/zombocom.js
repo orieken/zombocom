@@ -143,6 +143,31 @@ window.onload = function () {
         }
     });
 
+    var tweenMainOpacity = new Kinetic.Tween({
+        node: layer,
+        opacity: .1,
+        duration: .20,
+        onFinish: function () {
+            var mainReverseOpacity = new Kinetic.Tween({
+                node: layer,
+                opacity: 0,
+                duration: .20,
+                onFinish: function () {
+                    var mainLightenOpacity = new Kinetic.Tween({
+                        node: layer,
+                        opacity: .12,
+                        duration: .1,
+                        onFinish: function () {
+                            tweenMainOpacity.play();
+                        }
+                    });
+                    mainLightenOpacity.play();
+                }
+            });
+            mainReverseOpacity.play();
+        }
+    });
+
 
 //##################### animation
     var anim = new Kinetic.Animation(function (frame) {
@@ -154,6 +179,7 @@ window.onload = function () {
 
     anim.start();
     tweenOpacity.play();
+    tweenMainOpacity.play();
 };
 
 
