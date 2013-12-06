@@ -112,8 +112,8 @@ window.onload = function () {
         fill: 'green'
     });
 
-//    zLayer.add(simpleText);
-//    zomboHeader.add(zLayer);
+    zLayer.add(simpleText);
+    zomboHeader.add(zLayer);
 
 //##################### tween
 
