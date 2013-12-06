@@ -130,7 +130,7 @@ window.onload = function () {
                 onFinish: function () {
                     var lightenOpacity = new Kinetic.Tween({
                         node: outerLayer,
-                        opacity:.12,
+                        opacity: .12,
                         duration: .1,
                         onFinish: function () {
                             tweenOpacity.play();
@@ -145,15 +145,15 @@ window.onload = function () {
 
 
 //##################### animation
-            var anim = new Kinetic.Animation(function (frame) {
-                // move a node to the right at pixels / second
-                var velocity = 5;
-                var dist = velocity * (frame.timeDiff / 1000);
-                outerLayer.rotate(dist);
-            }, outerLayer);
+    var anim = new Kinetic.Animation(function (frame) {
+        // move a node to the right at pixels / second
+        var velocity = 5;
+        var dist = velocity * (frame.timeDiff / 1000);
+        outerLayer.rotate(dist);
+    }, outerLayer);
 
-            anim.start();
-            tweenOpacity.play();
-        };
+    anim.start();
+    tweenOpacity.play();
+};
 
 
